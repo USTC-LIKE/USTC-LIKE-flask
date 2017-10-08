@@ -1,0 +1,1 @@
+create table PUBLICATION(id string,authors string, title string,publisher string,year string,link string)

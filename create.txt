@@ -1,0 +1,2 @@
+drop table PEOPLE
+create table PEOPLE(id string,name id string,job string,img string,kind string,link string)

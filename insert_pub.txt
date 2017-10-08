@@ -1,0 +1,1 @@
+insert into PUBLICATION (id,authors,title,publisher,year,link) values ('1','Lan Zhang, Kebin Liu, Yonghang Jiang, Xiang-Yang Li, Yunhao Liu, Panlong Yang','Montage: Combine Frames with Movement Continuity for Realtime Multi-User Tracking','IEEE INFOCOM','2014','res/doc/montage-infocom14.pdf')

@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{%block actpeo%} class="active" {% endblock%}
+{% block content %}
+  	<div class="peoplearea">
+        <div class="peopletitle">&nbsp;Leaders</div>
+            <div class="innerframe">
+
+                {% for i in range(5)%}
+        
+                
+                    <div class="peopleframe f{{i+1}}">
+                    <a href="{{leaders[i][5]}}">
+                        <div class="peopleimg">
+                            <img src="../static/{{leaders[i][3]}}"/>
+                        </div>
+                     </a>
+                        <div class="peoplename">{{leaders[i][1]}}</div>
+                        <div class="peoplejob">{{leaders[i][2]}}</div>
+                    </div>
+               
+
+                {% endfor %}
+        
+                
+            </div>
+        </div>
+
+        <div class="peoplearea">
+        <div class="peopletitle">&nbsp;Current Members</div>
+
+            {% for i in sturows %}
+                <div class="innerframe">
+                {% for j in range(5) %}
+                    {% if i*5+j < stunumber %}
+               
+                    <div class="peopleframe f{{j+1}}">
+                         <a href="{{students[i*5+j][5]}}">
+                        <div class="peopleimg">
+                            <img src="../static/{{students[i*5+j][3]}}" />
+                        </div></a>
+                        <div class="peoplename">{{students[i*5+j][1]}}</div>
+                        <div class="peoplejob">{{students[i*5+j][2]}}</div>
+                    </div>
+                
+                    {% endif %}
+                {% endfor %}
+                </div>
+
+            {% endfor %}
+        </div>
+           
+
+        <div class="peoplearea">
+            <div class="peopletitle">&nbsp;Alumni</div>
+
+        </div>
+{% endblock %}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+
+<html>
+{% block head %}
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <script type="text/javascript" src="../static/js/jquery.js"></script>
+        <!-- <script type="text/javascript" src="js/jquery-1.12.4.min.js"></script> -->
+        <script type="text/javascript" src="../static/js/jquery.banner.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Josefin Slab" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Rakkas" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+<style type="text/css">
+        @font-face {
+            font-family: 'Source Sans Pro';
+            src: ../static/res/fonts/SourceSansPro-Regular.ttf;
+}
+</style>
+    {% block headadd %}
+
+    {% endblock %}
+        <link href = "../static/css/style.css" type="text/css" rel="stylesheet">
+        <link href="../static/css/bootstrap.css" rel="stylesheet">
+        <link href="../static/css/my.css" rel="stylesheet">
+
+
+        
+        <title>Lab for Intelligent Networking and Knowledge Engineering</title>
+    </head>
+{% endblock %}
+
+    <body>
+        <!--头部开始 -->
+        {% block pagehead %}
+        <div class="head" id="headd">
+            <div class="cont">
+                <div class="head-left">
+                    <a href="http://www.ustc.edu.cn/">
+                    <img src="../static/res/img/logo.jpg" alt="" /></a>
+                </div>
+                <div class="nav">
+                    <!--导航条-->
+
+                    <ul class="nav-main">
+                        <li>
+                            <a href="index.html" >HOMEPAGE</a>
+                        </li>
+                        <li id="li-1" {%block actres%} {% endblock%}>
+                            <a href="research.html">RESEARCH</a>
+                        </li>
+                        <li id="li-4" {%block actpro%} {% endblock%}>
+                            <a href="projects.html">PROJECTS</a>
+                        </li>
+                        <li id="li-2" {%block actpeo%} {% endblock%}>
+                            <a href="people.html">PEOPLE</a>
+                        </li>
+                        <li id="li-3" {%block actpub%} {% endblock%}>
+                            <a href="publications.html">PUBLICATIONS</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        {% endblock %}
+
+        {% block content %}
+        {% endblock %}
+
+        {% block pagetail %}
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="tail">
+            <div class="tail-cont">
+                <div class="tail-div">
+                    <h2>WEBSITE</h2>
+                    <ul>
+                        <li>
+                            <a href="http://www.ustc.edu.cn/">University of Science and Technology of China</a>
+                        </li>
+                        <li>
+                            <a href="http://ustc.life/">USTC Navigation</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tail-div">
+                    <h2>GET IN TOUCH</h2>
+                    <ul>
+                        <li>
+                            Address1: Rm.712, Third Electric Building, West Campus
+                            <br>Address2: Rm.119, Technology Building, West Campus
+                            <br>School of Computer Science and Technology
+                            <br>University of Science and Technology of China
+                            <br>Hefei, Anhui 230027, China
+                        </li>
+    
+                    </ul>
+                </div>
+            </div>
+            <div class="footer">
+                <p>© University of Science and Technology of China | All Rights Reserved</p>
+            </div>
+        </div>
+        <script src="../static/js/jquery.min.js"></script>
+        <script src="../static/js/jquery.fn.gantt.js"></script>
+        <script src="../static/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../static/js/my.js"></script>
+        {% endblock %}
+    </body>
+
+</html>
