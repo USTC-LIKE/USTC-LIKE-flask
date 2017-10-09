@@ -1,0 +1,1 @@
+UPDATE PEOPLE SET name = 'Xiang-Yang Li' WHERE name == 'Xiang-yang Li' 

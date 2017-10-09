@@ -1,3 +1,3 @@
-python db.py insert_pub.txt
+python db.py temp.txt
 
 pause

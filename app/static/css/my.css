@@ -175,9 +175,11 @@ div.tail-cont h2
     font-family: 'Merriweather Sans Bold', Arial, sans-serif;
     font-weight:600;
     font-style: normal;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     text-align: center;
-    font-size: 18px;
+    font-size: 16px;
+    color: #aaa;
+
 }
 div.tail-cont ul
 {
@@ -188,14 +190,18 @@ div.tail-cont ul
 div.tail-cont ul li
 {
     display: block;
-    line-height: 22px;
+    color: #aaa;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: normal;
 }
 .footer
 {
     width: 86%;
     border-top: 1px solid #f9f9f9;
     padding-bottom: 30px;
-    font-size: 18px;
+    font-size: 14px;
+    color: #aaa;
     margin: 14px 5% 0px 5%;
     padding-top: 4px;
     font-family: 'Merriweather Sans Light', Arial, sans-serif;
@@ -297,7 +303,7 @@ ul.nav-main li:hover {
     left: 50%;
     height: 20px;
     z-index: 9;
-    width: 90%;
+    width: 95%;
     margin-left: -50%
 }
 .jsNav {
@@ -361,17 +367,16 @@ ul.nav-main li:hover {
 }
 .hometitle {
     font-family: Source Sans Pro, sans serif;
-    font-weight: bold;
-    font-size: 40px;
-    color: #000055;
+    font-size: 48px;
+    
     margin-bottom: 20px;
 }
 .hometitle_Small {
-    font-family: Source Sans Pro, sans serif;
-    font-weight: bold;
-    font-size: 30px;
-    color: #000055;
-    margin-bottom: 20px;
+    font-family: PT Serif,times new roman, sans serif;
+  
+    font-size: 40px;
+    /*color: #335599;
+    margin-bottom: 20px;*/
 }
 .news {
 
@@ -385,19 +390,19 @@ ul.nav-main li:hover {
     overflow: hidden;
 }
 .f1 {
-    left: 20px;
+    left: 40px;
 }
 .f2 {
-    left: 60px;
+    left: 70px;
 }
 .f3 {
     left: 100px;
 }
 .f4 {
-    left: 140px;
+    left: 130px;
 }
 .f5 {
-    left: 180px;
+    left: 160px;
 }
 .newsimg {
     height: 200px;
@@ -459,10 +464,9 @@ ul.nav-main li:hover {
 }
 
 .peopletitle {
-  font-family:Source Sans Pro, sans serif;
+  font-family:PT Serif, sans serif;
   font-weight:bold;
-  font-size:40px;
-  color:#000055;
+  font-size:34px;
 }
 
 .innerframe {
@@ -474,16 +478,19 @@ ul.nav-main li:hover {
 }
 
 .peopleframe {
-  height: 300px;
-  width: 200px;
+  height: 280px;
+  width: 180px;
   position: relative;
   float:left;
   overflow: hidden;
+  text-align: center;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .peopleimg {
   height: 140px;
-  width: 200px;
+  width: 180px;
   margin: 0px auto;
   overflow: hidden;
   text-align: center;
@@ -491,7 +498,7 @@ ul.nav-main li:hover {
 
 .peoplename {
   font-family:Source Sans Pro,times new roman, sans serif;
-  font-size:30px;
+  font-size:24px;
   color:#000000;
   margin-bottom: 5px;
   margin-top: 0px;
@@ -499,7 +506,7 @@ ul.nav-main li:hover {
 }
 .peoplejob {
   font-family:Source Sans Pro, sans serif;
-  font-size:20px;
+  font-size:18px;
   color:#447799;
   text-align: center;
 }
@@ -544,4 +551,27 @@ ul.nav-main li:hover {
 
 .gwidth {
     width: 1300px;
+}
+
+.introtxt {
+    font-family: Open Sans;
+    font-size: 22px;
+
+}
+
+.littletitle {
+
+    font-size: 28px;
+    font-family: Open Sans;
+    color: #334477;
+    line-height: 50px;
+}
+
+.content {
+    font-size: 16px;
+    font-family: Open Sans;
+}
+
+.content ul{
+padding-left: 1.25em;
 }
