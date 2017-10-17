@@ -367,7 +367,7 @@ ul.nav-main li:hover {
 }
 .linkarea{
     float:right;
-    width: 550px;
+    width: 45%;
     overflow: hidden;
     height: 970px;
     position: relative;
@@ -376,7 +376,7 @@ ul.nav-main li:hover {
 
 .homearea {
     float:left;
-    width: 550px;
+    width: 45%;
     overflow: hidden;
     height: 970px;
     position: relative;
@@ -385,7 +385,7 @@ ul.nav-main li:hover {
 }
 .hometitle {
     font-family: Source Sans Pro, sans serif;
-    font-size: 48px;
+    font-size: 20px;
     
     margin-bottom: 20px;
 }
