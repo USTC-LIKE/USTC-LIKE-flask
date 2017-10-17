@@ -47,6 +47,8 @@ dd ul
 {
     color: #5252d2;
 }
+
+
 a {
     text-decoration: none;
     color: inherit;
@@ -110,7 +112,7 @@ p
     background: #333;
 }
 .cont {
-    width: 1300px;
+    width: 1400px;
     margin: 0px auto;
     overflow: hidden;
     background: #333
@@ -230,7 +232,7 @@ div.tail-cont ul li
     font-weight: bold;
     font-family: Raleway, sans serif;
     z-index: 1000;
-    left: 178px
+    left: 100px
 }
 
 ul.nav-main {
@@ -393,6 +395,13 @@ ul.nav-main li:hover {
     font-family: PT Serif,times new roman, sans serif;
   
     font-size: 40px;
+    /*color: #335599;
+    margin-bottom: 20px;*/
+}
+.job_title {
+    font-family: PT Serif,times new roman, sans serif;
+  
+    font-size: 30px;
     /*color: #335599;
     margin-bottom: 20px;*/
 }
@@ -572,6 +581,25 @@ ul.nav-main li:hover {
     margin-bottom: 1.5em;
 }
 
+.jobframe {
+    /*top: 100px;*/
+    padding-top:100px;
+    width: 1100px;
+    height: 1200px;
+    margin: 0px auto;
+    /*overflow: hidden;*/
+    position: relative;
+}
+
+.jobtext {
+    width: 800px;
+    float: right;
+    height: auto;
+    /*overflow: hidden;*/
+    position: relative;
+    margin-bottom: 1.5em;
+}
+
 .placeholder {
     position: absolute;
     display:block;
@@ -602,6 +630,14 @@ ul.nav-main li:hover {
     line-height: 50px;
 }
 
+.job_littletitle {
+
+    font-size: 24px;
+    font-family: Open Sans;
+    color: #334477;
+    line-height: 50px;
+}
+
 .content {
     font-size: 16px;
     font-family: Open Sans;
@@ -609,4 +645,18 @@ ul.nav-main li:hover {
 
 .content ul{
 padding-left: 1.25em;
+}
+
+.job_content {
+    font-size: 16px;
+    font-family: Open Sans;
+    margin-bottom: 16px; 
+}
+
+.job_content ul{
+padding-left: 1.25em;
+}
+
+.job_content ul li {
+list-style-type:none;
 }

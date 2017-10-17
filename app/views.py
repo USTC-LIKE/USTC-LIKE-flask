@@ -66,9 +66,20 @@ def publications():
     conn.close()
     return render_template("publications.html",pubs2016=pubs2016,pubs2015=pubs2015,pubs2014=pubs2014)  
 
+@app.route("/information.html")
+@app.route("/information")
+def information():
+    return render_template("information.html", job=0)
 
-
-    
+@app.route("/information/job1.html")
+def job1():
+    return render_template("information.html", job=1)
+@app.route("/information/job2.html")
+def job2():
+    return render_template("information.html", job=2)
+@app.route("/information/job3.html")
+def job3():
+    return render_template("information.html", job=3)
 
 @app.route('/hello')
 def hello():
