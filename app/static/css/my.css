@@ -367,11 +367,11 @@ ul.nav-main li:hover {
 }
 .linkarea{
     float:right;
-    width: 45%;
+    width: 55%;
     overflow: hidden;
     height: 970px;
     position: relative;
-    margin: 0px auto;
+    margin: 0px ;
 }
 
 .homearea {
@@ -386,7 +386,7 @@ ul.nav-main li:hover {
 .hometitle {
     font-family: Source Sans Pro, sans serif;
     font-size: 20px;
-    
+    float: left;
     margin-bottom: 20px;
 }
 .hometitle_Small {
@@ -400,11 +400,11 @@ ul.nav-main li:hover {
 
 }
 .newsframe {
-    height: 150px;
+    height: 130px;
     width: 1000px;
     position: relative;
     /*float: left;*/
-    margin-left: 30px;
+    margin-left: 0px;
     overflow: hidden;
 }
 .f1 {
@@ -439,7 +439,7 @@ ul.nav-main li:hover {
     text-align:left;
     height: 170px;
     width: 250px;
-    margin-left: 20px;
+    margin-left: 10px;
     overflow: hidden;
     float: left;
 }
