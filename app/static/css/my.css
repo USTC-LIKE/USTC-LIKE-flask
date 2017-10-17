@@ -357,8 +357,26 @@ ul.nav-main li:hover {
     transform: scale(1);
     z-index: 4;
 }
+.left_right{
+    text-align:center;
+    width: 1100px;
+    overflow: hidden;
+    height: 970px;
+    position: relative;
+    margin: 0px auto;   
+}
+.linkarea{
+    float:right;
+    width: 550px;
+    overflow: hidden;
+    height: 970px;
+    position: relative;
+    margin: 0px auto;
+}
+
 .homearea {
-    width: 1300px;
+    float:left;
+    width: 550px;
     overflow: hidden;
     height: 970px;
     position: relative;
@@ -382,7 +400,7 @@ ul.nav-main li:hover {
 
 }
 .newsframe {
-    height: 250px;
+    height: 150px;
     width: 1000px;
     position: relative;
     /*float: left;*/
@@ -405,21 +423,35 @@ ul.nav-main li:hover {
     left: 160px;
 }
 .newsimg {
-    height: 200px;
-    width: 380px;
+    height: 105px;
+    width: 200px;
     margin: 0px auto;
     overflow: hidden;
     float: left;
 }
+.newsimg1 {
+
+    height: 100%;
+    width: 100%;
+    
+}
 .newstxt {
-    height: 200px;
-    width: 580px;
+    text-align:left;
+    height: 170px;
+    width: 250px;
     margin-left: 20px;
     overflow: hidden;
     float: left;
 }
 .newstxt a, #MoreNews
 {
+    font-family: Source Sans Pro,times new roman, sans serif;
+    font-weight:bold;
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 0px;
+
+/*
     font-size: 20px;
     float: right;
     color: #a51c30;
@@ -428,11 +460,11 @@ ul.nav-main li:hover {
     font-weight: 200;
     font-style: normal;
     letter-spacing: 0.03em;
-    text-transform: uppercase;
+    text-transform: uppercase;*/
 }
 .newstxt a:hover, #MoreNews:hover
 {
-    text-decoration:none;
+    color: #FF00FF;
 }
 
 .newstxt a:visited
@@ -441,18 +473,21 @@ ul.nav-main li:hover {
 }
 .newstitle {
     font-family: Source Sans Pro,times new roman, sans serif;
-    
-    font-size: 30px;
+    font-weight:bold;
+    font-size: 14px;
     color: #000000;
-    margin-bottom: 18px;
+    margin-bottom: 0px;
     /*margin-top: 25px;*/
     /*float: left;*/
 }
 .newsabs {
+    width: 100%;
+    height: 0%;
     font-family: roboto, sans serif;
-    font-size: 20px;
+    font-size: 13px;
+    overflow: hidden
     /*float: left;*/
-    color: #000000;
+    color: #100000;
 }
 
 .peoplearea {
