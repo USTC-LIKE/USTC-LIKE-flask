@@ -1,3 +1,3 @@
-python db.py temp.txt
+python db.py insert_.txt
 
 pause
