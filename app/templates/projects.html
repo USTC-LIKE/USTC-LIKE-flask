@@ -1,10 +1,80 @@
 {% extends "layout.html" %}
 {%block actpro%} class="active" {% endblock%}
         {%block content%}
-        <div class="peoplearea">
+
+            <div class="peoplearea">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-12">
+                	<div class="col-md-3">
+                		<div class="row" id="myNav" id="wwwidthhh">
+                			<div class="col-sm-12 col-md-12">
+            <div class="panel-group" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-list">
+                            </span>Wireless Group</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="#2016">Data Mining</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="http://www.baidu.com">Data Privacy </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="http://www.baidu.com">Data Trading</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th">
+                            </span>Data Group</a>
+                        </h4>
+                    </div>
+                    <div id="collapseTwo" class="panel-collapse collapse">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="#2016">Data Mining</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="http://www.baidu.com">Data Privacy </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="http://www.baidu.com">Data Trading</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+        		<div class="col-md-9">
+        			<div class="row">
+
+        				                    <div class="col-sm-12 col-md-12">
                         <div class="jumbotron">
                             <h2 class="hometitle">Current Funded Projects:</h2>
                             <br>
@@ -67,7 +137,12 @@
                                 </div> -->
                         </div>
                     </div>
+
+        			</div>
+        		</div>
+
                 </div>
             </div>
         </div>
+        
         {% endblock %}
