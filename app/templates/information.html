@@ -1,46 +1,43 @@
-{% extends "layout.html" %}
+{% extends "layout_subpage.html" %}
 {%block actinf%} class="active" {% endblock%}
 
    
-   {% block content%}
+   {% block nav%}
 
-        <div class="jobframe">
-            <div class="pubnav">
-                <aside id="sidebar">
-                    <div class="inside">   
-                        <table class="table table-hover ">
-                    <tbody>
-                        <tr>
-                            <th>
-                                <a href="/information/job1.html">工程师岗位</a>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a href="/information/job2.html">项目助理岗位</a>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                <a href="/information/job3.html">博士后岗位</a>
-                            </th>
-                        </tr>
-                    
-                    </tbody>
-                </table>
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-list">
+                            </span>招聘信息</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="/information/job1.html">工程师岗位</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="/information/job2.html">项目助理岗位</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="/information/job3.html">博士后岗位</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                </aside>
-                
-            </div>
-
-            <div class="jobtext">
+                  
+{%endblock%}
+{%block text%}
 
             {% if job == 1 %}
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="jumbotron">
-                            
-                            <div class="row">
                              
                                         <img alt="head" width="860px" height="330px" src="../static/res/img/snow-hefei-spec.jpg"> <br> <br>
 
@@ -133,10 +130,6 @@
                                 电话：0551-63600107, 15805190469, 18611450516<br>
                                 联系人：杨老师，张老师<br>
                                 </div> 
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
 
                                 {% endif %}
 
@@ -144,11 +137,6 @@
 
 
             {% if job == 2 %}
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="jumbotron">
-                            
-                            <div class="row">
                              
                                         <img alt="head" width="860px" height="330px" src="../static/res/img/snow-hefei-spec.jpg"> <br> <br>
 
@@ -270,21 +258,12 @@
                                 电话：0551-63600107, 15805190469, 18611450516<br>
                                 联系人：杨老师，张老师<br>
                                 </div> 
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
 
                                 {% endif %}
 
 
 
             {% if job == 3 %}
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="jumbotron">
-                            
-                            <div class="row">
                              
                                         <img alt="head" width="860px" height="330px" src="../static/res/img/snow-hefei-spec.jpg"> <br> <br>
 
@@ -389,15 +368,7 @@
                                 联系人：杨老师，张老师 <br>
                                 有意者请将申请材料发至上述电子邮箱，邮件标题为：博士毕业院校-申请人姓名-应聘博士后。<br>
                                 </div> 
-                                    </div>
-                                    </div>
-                                    </div>
-                                    </div>
 
                                 {% endif %}
 
-
-                                    </div>
-                                  </div>
-        
         {% endblock %}

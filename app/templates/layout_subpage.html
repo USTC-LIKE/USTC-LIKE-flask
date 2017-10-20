@@ -1,0 +1,31 @@
+{% extends "layout.html" %}
+{%block actres%} {% endblock%}
+{%block actpro%} {% endblock%}
+{%block actpeo%} {% endblock%}
+{%block actpub%} {% endblock%}
+{%block actinf%} {% endblock%}
+
+{%block content%}
+
+<div class="jobframe">
+	<div class="pubnav">
+		<aside id="sidebar">
+{%block nav%}
+{%endblock%}
+		</aside>
+	</div>
+
+
+
+	<div class="jobtext">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row">
+{%block text%}
+{%endblock%}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{%endblock%}

@@ -1,15 +1,7 @@
-{% extends "layout.html" %}
+{% extends "layout_subpage.html" %}
 {%block actpro%} class="active" {% endblock%}
-        {%block content%}
-
-            <div class="peoplearea">
-            <div class="container">
-                <div class="row">
-                	<div class="col-md-3">
-                		<div class="row" id="myNav" id="wwwidthhh">
-                			<div class="col-sm-12 col-md-12">
-            <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
+{%block nav%}
+<div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-list">
@@ -21,128 +13,54 @@
                             <table class="table">
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="#2016">Data Mining</a>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="#c2017">Project1</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="http://www.baidu.com">Data Privacy </a>
+                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="#c2016">Project2</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-file text-info"></span><a href="http://www.baidu.com">Data Trading</a>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="#c2015">Project3</a>
                                     </td>
                                 </tr>
+                              
                             </table>
                         </div>
                     </div>
                 </div>
+
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-list">
                             </span>Data Group</a>
                         </h4>
                     </div>
-                    <div id="collapseTwo" class="panel-collapse collapse">
+                    <div id="collapseTwo" class="panel-collapse collapse in">
                         <div class="panel-body">
                             <table class="table">
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="#2016">Data Mining</a>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="#c2017">Project1</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="http://www.baidu.com">Data Privacy </a>
+                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="#c2016">Project2</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-file text-info"></span><a href="http://www.baidu.com">Data Trading</a>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="#c2015">Project3</a>
                                     </td>
                                 </tr>
+                              
                             </table>
                         </div>
                     </div>
                 </div>
-            </div>
-            </div>
-        </div>
-        </div>
-        		<div class="col-md-9">
-        			<div class="row">
+{%endblock%}
 
-        				                    <div class="col-sm-12 col-md-12">
-                        <div class="jumbotron">
-                            <h2 class="hometitle">Current Funded Projects:</h2>
-                            <br>
-                            <div class="list-group">
-                                <a href="#" class="list-group-item active projec_title_font"><span class="badge"></span>Wireless Group</a>
-                                <div class="list-group-item projec_cont_font">
-                                    [<a href="">Sensing and Imaging through Walls Based on Universal Wireless Signals</a>]
-                                    Funded by [<a href="">NSFC</a>] to Sept, 2015 (Estimated). Xiangyang Li, Principal Investigator; Co-PIs: ShangPing Ren, Paul Anderson, and Fouad Teymour.List header
-                                </div>
-                                <div class="list-group-item projec_cont_font">
-                                    [<a href="">Sensing and Imaging through Walls Based on Universal Wireless Signals</a>]
-                                    Funded by [<a href="">NSFC</a>] to Sept, 2015 (Estimated). Xiangyang Li, Principal Investigator; Co-PIs: ShangPing Ren, Paul Anderson, and Fouad Teymour.List header
-                                </div>
-                                <div class="list-group-item projec_cont_font">
-                                    [<a href="">Sensing and Imaging through Walls Based on Universal Wireless Signals</a>]
-                                    Funded by [<a href="">NSFC</a>] to Sept, 2015 (Estimated). Xiangyang Li, Principal Investigator; Co-PIs: ShangPing Ren, Paul Anderson, and Fouad Teymour.List header
-                                </div>
-                                <div class="list-group-item">
-                                    <h4 class="list-group-item-heading">
-                                        List group item heading
-                                    </h4>
-                                    <p class="list-group-item-text">
-                                        ...
-                                    </p>
-                                </div>
-                                <a class="list-group-item active projec_title_font"><span class="badge"></span>Data Group</a>
-                                <div class="list-group-item projec_cont_font">
-                                    [<a href="">Sensing and Imaging through Walls Based on Universal Wireless Signals</a>]
-                                    Funded by [<a href="">NSFC</a>] to Sept, 2015 (Estimated). Xiangyang Li, Principal Investigator; Co-PIs: ShangPing Ren, Paul Anderson, and Fouad Teymour.List header
-                                </div>
-                                <div class="list-group-item projec_cont_font">
-                                    [<a href="">Sensing and Imaging through Walls Based on Universal Wireless Signals</a>]
-                                    Funded by [<a href="">NSFC</a>] to Sept, 2015 (Estimated). Xiangyang Li, Principal Investigator; Co-PIs: ShangPing Ren, Paul Anderson, and Fouad Teymour.List header
-                                </div>
-                                <div class="list-group-item projec_cont_font">
-                                    [<a href="">Sensing and Imaging through Walls Based on Universal Wireless Signals</a>]
-                                    Funded by [<a href="">NSFC</a>] to Sept, 2015 (Estimated). Xiangyang Li, Principal Investigator; Co-PIs: ShangPing Ren, Paul Anderson, and Fouad Teymour.List header
-                                </div>
-                                <div class="list-group-item">
-                                    <br>
-                                </div>
-                            </div>
-                            <!-- <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">
-                                        Wireless Group
-                                    </h3>
-                                </div>
-                                <div class="panel-body">
-                                    Panel content
-                                </div>
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">
-                                        Data Group
-                                    </h3>
-                                </div>
-                                <div class="panel-body">
-                                    Panel content
-                                </div>
-                                </div> -->
-                        </div>
-                    </div>
-
-        			</div>
-        		</div>
-
-                </div>
-            </div>
-        </div>
-        
-        {% endblock %}

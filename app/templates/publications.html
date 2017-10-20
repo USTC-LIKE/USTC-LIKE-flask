@@ -1,18 +1,14 @@
-{% extends "layout.html" %}
+{% extends "layout_subpage.html" %}
 {%block actpub%} class="active" {% endblock%}
 
-   
-   {% block content%}
+{% block nav%}
 
-        <div class="pubframe">
 
-                        <div class="col-sm-3 col-md-3" id="myNav">
-            <div class="panel-group" id="accordion">
-                <div class="panel panel-default">
+                    <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
                             <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-list">
-                            </span>2016</a>
+                            </span>Conference</a>
                         </h4>
                     </div>
                     <div id="collapseOne" class="panel-collapse collapse in">
@@ -20,200 +16,178 @@
                             <table class="table">
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="#2016">Data Mining</a>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="#c2017">2017</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="http://www.baidu.com">Data Privacy </a>
+                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="#c2016">2016</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <span class="glyphicon glyphicon-file text-info"></span><a href="http://www.baidu.com">Data Trading</a>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="#c2015">2015</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="#c2014">2014</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="#c2013">2013</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="#c2012">2012</a>
                                     </td>
                                 </tr>
                             </table>
                         </div>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><span class="glyphicon glyphicon-th">
-                            </span>2015</a>
-                        </h4>
-                    </div>
-                    <div id="collapseTwo" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <table class="table">
-                                <tr>
-                                    <td>
-                                        <a href="http://www.jquery2dotnet.com">Orders</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="http://www.jquery2dotnet.com">Invoices</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="http://www.jquery2dotnet.com">Shipments</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="http://www.jquery2dotnet.com">Tex</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><span class="glyphicon glyphicon-list">
-                            </span>2014</a>
-                        </h4>
-                    </div>
-                    <div id="collapseThree" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <table class="table">
-                                <tr>
-                                    <td>
-                                        <a href="http://www.jquery2dotnet.com">Change Password</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="http://www.jquery2dotnet.com">Notifications</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <a href="http://www.jquery2dotnet.com">Import/Export</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-trash text-danger"></span><a href="http://www.jquery2dotnet.com" class="text-danger">
-                                            Delete Account</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour"><span class="glyphicon glyphicon-file">
-                            </span>2013</a>
-                        </h4>
-                    </div>
-                    <div id="collapseFour" class="panel-collapse collapse">
-                        <div class="panel-body">
-                            <table class="table">
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-usd"></span><a href="http://www.jquery2dotnet.com">Sales</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-user"></span><a href="http://www.jquery2dotnet.com">Customers</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-tasks"></span><a href="http://www.jquery2dotnet.com">Products</a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span class="glyphicon glyphicon-shopping-cart"></span><a href="http://www.jquery2dotnet.com">Shopping Cart</a>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            
-            <div class="pubtext">
-                <table class="table table-striped ">
-                    <thead>
-                        <tr>
-                            <th><span class="placeholder" id="h2016"></span> 2016</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for pub in pubs2016 %}
-                        <tr>
-                            <td> <span class="paperstyle">
-                                {{pub[1]}}. <b>{{pub[2]}}</b>. {{pub[3]}}, {{pub[4]}}. [<a href="../static/{{pub[5]}}">PDF</a>]   </span>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
+   
+{%endblock%}
 
-                    <thead>
-                        <tr>
-                            <th><span class="placeholder" id="h2015"></span>2015</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for pub in pubs2015 %}
-                        <tr>
-                            <td> <span class="paperstyle">
-                                {{pub[1]}}. <b>{{pub[2]}}</b>. {{pub[3]}}, {{pub[4]}}. [<a href="../static/{{pub[5]}}">PDF</a>]   </span>
-                            </td>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-                    <thead>
-                        <tr>
-                            <th><span class="placeholder" id="h2014"></span>
-                                2014
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {% for pub in pubs2014 %}
-                        <tr>
-                            <td> <span class="paperstyle">
-                                {{pub[1]}}. <b>{{pub[2]}}</b>. {{pub[3]}}, {{pub[4]}}. [<a href="../static/{{pub[5]}}">PDF</a>]   
-                            </td> </span>
-                        </tr>
-                        {% endfor %}
-                    </tbody>
-
-                    <thead>
-                        <tr>
-                            <th><span class="placeholder" id="h2013"></span>
-                                2013
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                      
-                    </tbody>
-
-                    <thead>
-                        <tr>
-                            <th><span class="placeholder" id="h2012"></span>
-                                2012
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                      
-                    </tbody>
-                </table>
-            </div>
-        </div>
+{% block text%}
+       
+<table class="table table-striped ">
+            <thead>
+                <tr>
+                    <th>
+                        <span class="placeholder" id="c2017">
+                        </span>
+                        2017
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pub in pubs2017 %}
+                <tr>
+                    <td>
+                        <span class="paperstyle">
+                            {{pub[1]}}.
+                            <b>
+                                {{pub[2]}}
+                            </b>
+                            . {{pub[3]}}, {{pub[4]}}. [
+                            <a href="../static/{{pub[5]}}">
+                                PDF
+                            </a>
+                            ]
+                        </span>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <thead>
+                <tr>
+                    <th>
+                        <span class="placeholder" id="c2016">
+                        </span>
+                        2016
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pub in pubs2016 %}
+                <tr>
+                    <td>
+                        <span class="paperstyle">
+                            {{pub[1]}}.
+                            <b>
+                                {{pub[2]}}
+                            </b>
+                            . {{pub[3]}}, {{pub[4]}}. [
+                            <a href="../static/{{pub[5]}}">
+                                PDF
+                            </a>
+                            ]
+                        </span>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <thead>
+                <tr>
+                    <th>
+                        <span class="placeholder" id="c2015">
+                        </span>
+                        2015
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pub in pubs2015 %}
+                <tr>
+                    <td>
+                        <span class="paperstyle">
+                            {{pub[1]}}.
+                            <b>
+                                {{pub[2]}}
+                            </b>
+                            . {{pub[3]}}, {{pub[4]}}. [
+                            <a href="../static/{{pub[5]}}">
+                                PDF
+                            </a>
+                            ]
+                        </span>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <thead>
+                <tr>
+                    <th>
+                        <span class="placeholder" id="c2014">
+                        </span>
+                        2014
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pub in pubs2014 %}
+                <tr>
+                    <td>
+                        <span class="paperstyle">
+                            {{pub[1]}}.
+                            <b>
+                                {{pub[2]}}
+                            </b>
+                            . {{pub[3]}}, {{pub[4]}}. [
+                            <a href="../static/{{pub[5]}}">
+                                PDF
+                            </a>
+                            ]
+                    </td>
+                    </span>
+                </tr>
+                {% endfor %}
+            </tbody>
+            <thead>
+                <tr>
+                    <th>
+                        <span class="placeholder" id="c2013">
+                        </span>
+                        2013
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <thead>
+                <tr>
+                    <th>
+                        <span class="placeholder" id="c2012">
+                        </span>
+                        2012
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
         
-        {% endblock %}
+{% endblock %}
