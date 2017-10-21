@@ -659,10 +659,22 @@ div.tail-cont ul li {
 
 .hometitle_Small {
     font-family: PT Serif,times new roman, sans serif;
-    font-size: 40px;
+    font-size: 32px;
+    padding-bottom: 10px;
+    font-weight: bold;
     /*color: #335599;
     margin-bottom: 20px;*/
 }
+
+.bigtitle {
+    font-family: PT Serif,times new roman, sans serif;
+    font-size: 32px;
+    padding-bottom: 12px;
+    font-weight: bold;
+    /*color: #335599;
+    margin-bottom: 20px;*/
+}
+
 
 .job_title {
     font-family: PT Serif,times new roman, sans serif;
@@ -899,17 +911,19 @@ div.tail-cont ul li {
 }
 
 .littletitle {
-    font-size: 28px;
+    font-size: 22px;
     font-family: Open Sans;
     color: #334477;
-    line-height: 50px;
+    line-height: 30px;
+    padding-bottom: 10px;
 }
 
 .job_littletitle {
-    font-size: 24px;
+    font-size: 22px;
     font-family: Open Sans;
     color: #334477;
-    line-height: 50px;
+    line-height: 30px;
+    padding-bottom: 10px;
 }
 
 .content {
