@@ -1,51 +1,142 @@
 {% extends "layout.html" %}
 {%block actpeo%} class="active" {% endblock%}
 {% block content %}
-  	<div class="peoplearea">
+    <div class="peoplearea">
         <div class="peopletitle">&nbsp;Leaders</div>
             <div class="innerframe">
 
-                {% for i in range(5)%}
+                
         
                 
-                    <div class="peopleframe f{{i+1}}">
-                    <a href="{{leaders[i][5]}}">
+                    <div class="peopleframe f1">
+                    <a href="http://staff.ustc.edu.cn/~xiangyangli/">
                         <div class="peopleimg">
-                            <img src="../static/{{leaders[i][3]}}"/>
+                            <img src="../static/res/img/people/lixiangyang.jpg"/>
                         </div>
                      </a>
-                        <div class="peoplename">{{leaders[i][1]}}</div>
-                        <div class="peoplejob">{{leaders[i][2]}}</div>
+                        <div class="peoplename">Xiang-Yang Li</div>
+                        <div class="peoplejob">Professor, IEEE fellow</div>
                     </div>
                
 
-                {% endfor %}
+                
+        
+                
+                    <div class="peopleframe f2">
+                    <a href="#">
+                        <div class="peopleimg">
+                            <img src="../static/res/img/people/yangpanlong.jpg"/>
+                        </div>
+                     </a>
+                        <div class="peoplename">Panlong Yang</div>
+                        <div class="peoplejob">Professor</div>
+                    </div>
+               
+
+                
+        
+                
+                    <div class="peopleframe f3">
+                    <a href="#">
+                        <div class="peopleimg">
+                            <img src="../static/res/img/people/zhanglan.jpg"/>
+                        </div>
+                     </a>
+                        <div class="peoplename">Lan Zhang</div>
+                        <div class="peoplejob">Professor</div>
+                    </div>
+               
+
+                
+        
+                
+                    <div class="peopleframe f4">
+                    <a href="#">
+                        <div class="peopleimg">
+                            <img src="../static/res/img/people/tanhaisheng.jpg"/>
+                        </div>
+                     </a>
+                        <div class="peoplename">Haisheng Tan</div>
+                        <div class="peoplejob">Associate Professor</div>
+                    </div>
+               
+
+                
+        
+                
+                    <div class="peopleframe f5">
+                    <a href="#">
+                        <div class="peopleimg">
+                            <img src="../static/res/img/people/unknown.jpg"/>
+                        </div>
+                     </a>
+                        <div class="peoplename">Hao Zhou</div>
+                        <div class="peoplejob">Lecture</div>
+                    </div>
+               
+
+                
         
                 
             </div>
         </div>
 
-        <div class="peoplearea">
-        <div class="peopletitle">&nbsp;Current Members</div>
 
-            {% for i in sturows %}
+        <div class="peoplearea">
+        <div class="peopletitle">&nbsp;PhD students</div>
+            {% for i in phdrows %}
                 <div class="innerframe">
                 {% for j in range(5) %}
-                    {% if i*5+j < stunumber %}
-               
+                    {% if i*5+j < phdnumber %}
                     <div class="peopleframe f{{j+1}}">
-                         <a href="{{students[i*5+j][5]}}">
+                         <a href="{{PhDs[i*5+j][1]}}">
                         <div class="peopleimg">
-                            <img src="../static/{{students[i*5+j][3]}}" />
+                            <img src="{{PhDs[i*5+j][2]}}" />
                         </div></a>
-                        <div class="peoplename">{{students[i*5+j][1]}}</div>
-                        <div class="peoplejob">{{students[i*5+j][2]}}</div>
+                        <div class="peoplename">{{PhDs[i*5+j][0]}}</div>
+                        <div class="peoplejob">PhD Students</div>
                     </div>
-                
                     {% endif %}
                 {% endfor %}
                 </div>
-
+            {% endfor %}
+        </div>
+        <div class="peoplearea">
+        <div class="peopletitle">&nbsp;master students</div>
+            {% for i in masterrows %}
+                <div class="innerframe">
+                {% for j in range(5) %}
+                    {% if i*5+j < masternumber %}
+                    <div class="peopleframe f{{j+1}}">
+                         <a href="{{masters[i*5+j][1]}}">
+                        <div class="peopleimg">
+                            <img src="{{masters[i*5+j][2]}}" />
+                        </div></a>
+                        <div class="peoplename">{{masters[i*5+j][0]}}</div>
+                        <div class="peoplejob">master Students</div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
+            {% endfor %}
+        </div>
+        <div class="peoplearea">
+        <div class="peopletitle">&nbsp;undergraduate students</div>
+            {% for i in undergraduaterows %}
+                <div class="innerframe">
+                {% for j in range(5) %}
+                    {% if i*5+j < undergraduatenumber %}
+                    <div class="peopleframe f{{j+1}}">
+                         <a href="{{undergraduates[i*5+j][1]}}">
+                        <div class="peopleimg">
+                            <img src="{{undergraduates[i*5+j][2]}}" />
+                        </div></a>
+                        <div class="peoplename">{{undergraduates[i*5+j][0]}}</div>
+                        <div class="peoplejob">undergraduate Students</div>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+                </div>
             {% endfor %}
         </div>
            
