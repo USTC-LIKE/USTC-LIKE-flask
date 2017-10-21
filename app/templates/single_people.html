@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+{%block actpeo%} class="active" {% endblock%}
+{% block content %}
+<br><br><br><br><br>
+<div style="width: 50%; margin: 0 auto">
+<h3 id="name">{{name}}</h3>
+<br>
+<TABLE style="font-size:16px;border-style:none;" cellSpacing="0" borderColor="#ffffff" cellPadding="2" width="100%" align="center">
+<TBODY>
+<TR>
+<TD vAlign="top" width="70%" align="left">
+<p>
+{{category}}
+</p>
+<p>
+homepage:{{homepage}}
+</p>
+<p>
+E- Mail：<A href="mailto:{{email}}">{{email}}</A>
+</p>
+<p>
+office address：{{office}}
+</TD>
+<TD vAlign="center" width="50%" align="center">
+<IMG style=" max-width:175px;max-height:175px; " alt src="{{img}}" >
+</TD>
+</TR>
+</TBODY>
+</TABLE>
+{%for t_c in title_content%}
+
+<h4><strong>{{t_c[0]}}</strong></h4>
+<h5><pre style="border:0px solid #c00;background-color:transparent;">{{t_c[1]}}</pre></h5>
+
+<br>
+{%endfor%}
+</div>
+{% endblock %}
