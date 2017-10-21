@@ -50,6 +50,11 @@ def projects():
 def publications():
     conn=sqlite3.connect('LIKE1.db')
     cursor = conn.cursor()
+
+    cursor.execute('select * from PUBLICATION where year == \'2017\'')
+    values= cursor.fetchall()
+    pubs2017 = values
+
     cursor.execute('select * from PUBLICATION where year == \'2016\'')
     values= cursor.fetchall()
     pubs2016 = values
@@ -64,7 +69,7 @@ def publications():
 
     cursor.close()
     conn.close()
-    return render_template("publications.html",pubs2016=pubs2016,pubs2015=pubs2015,pubs2014=pubs2014)  
+    return render_template("publications.html",pubs2017=pubs2017,pubs2016=pubs2016,pubs2015=pubs2015,pubs2014=pubs2014)  
 
 @app.route("/information.html")
 @app.route("/information")
