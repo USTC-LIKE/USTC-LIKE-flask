@@ -116,7 +116,7 @@ def publications():
 @app.route("/information.html")
 @app.route("/information")
 def information():
-    return render_template("information.html", job=0)
+    return render_template("information.html", job=1)
 
 @app.route("/information/job1.html")
 def job1():

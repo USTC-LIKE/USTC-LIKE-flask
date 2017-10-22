@@ -577,8 +577,8 @@ p {
 }
 
 .tail-div {
-    text-align: left;
-    width: 40%;
+    text-align: center;
+    width: 48%;
     height: auto;
     line-height: 40px;
     position: relative;
@@ -601,7 +601,7 @@ div.tail-cont h2 {
 }
 
 div.tail-cont ul {
-    padding-left: 15%;
+    margin: 0px auto;
     list-style: none;
     font-size: 16px;
 }
@@ -615,7 +615,7 @@ div.tail-cont ul li {
 }
 
 .footer {
-    width: 86%;
+    width: 89%;
     border-top: 1px solid #f9f9f9;
     padding-bottom: 30px;
     font-size: 14px;
