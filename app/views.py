@@ -82,6 +82,11 @@ def research():
 def projects():
     return render_template("projects.html")
 
+@app.route("/news.html")
+@app.route("/news")
+def news():
+    return render_template("news.html")
+
 @app.route("/publications.html")
 @app.route("/publications")
 def publications():
