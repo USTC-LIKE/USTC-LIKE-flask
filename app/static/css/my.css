@@ -631,7 +631,7 @@ div.tail-cont ul li {
 
 .left_right {
     text-align: center;
-    width: 1100px;
+    width: 60%;
     overflow: hidden;
     height: 970px;
     position: relative;
@@ -640,7 +640,7 @@ div.tail-cont ul li {
 
 .linkarea {
     float: right;
-    width: 55%;
+    width: 42%;
     overflow: hidden;
     height: 970px;
     position: relative;
@@ -649,18 +649,89 @@ div.tail-cont ul li {
 
 .homearea {
     float: left;
-    width: 45%;
+    width: 57%;
     overflow: hidden;
     height: 970px;
     position: relative;
     margin: 0px auto;
 }
 
+.td_home {
+    padding: 6px;
+}
+
 .hometitle {
     font-family: Source Sans Pro, sans serif;
     font-size: 20px;
     float: left;
-    margin-bottom: 20px;
+    margin-left: 10px;
+}
+
+table{
+    width: 100%;
+}
+
+td, th {
+    padding: 3px 3px;
+}
+
+th {
+    background: #E0E0E0;
+}
+
+td {
+    background: #EEEEEE;
+}
+
+.p_table {
+    text-indent: 10px;
+    text-align: left;
+    margin-left: 5px;
+}
+
+.calli li{
+    padding: 0px 0px;
+}
+
+.cal {
+    width: 54px;
+    background: #fff;
+    border: 1px solid #ccc;
+    margin: 0 1em 0 0 !important;
+    float: left;
+}
+
+.cal .time {
+    display: block;
+    text-align: center;
+}
+
+.cal .my {
+    background: #005481;
+    padding: 8px 0;
+    display: block;
+    font-size: 9px;
+    line-height: 1;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bold;
+    text-indent: 0;
+}
+
+.cal .day {
+    padding: 10px 0 8px;
+    display: block;
+    font-size: 24px;
+    line-height: 1;
+    text-indent: 0;
+}
+
+.tabcalkey{
+    text-align: right;
+}
+
+.tabcalvalue{
+    text-align: left;
 }
 
 .hometitle_Small {
