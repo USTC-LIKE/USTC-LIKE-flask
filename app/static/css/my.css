@@ -627,13 +627,21 @@ div.tail-cont ul li {
     /*background:inherit;*/
 }
 
-
+.people_frame {
+    width: 1300px;
+    overflow: hidden;
+    height: 100%;
+    position: relative;
+    margin: 0px auto;
+    top:100px;
+    margin-bottom: 100px;
+}
 
 .left_right {
     text-align: center;
     width: 60%;
     overflow: hidden;
-    height: 970px;
+    height: auto;
     position: relative;
     margin: 0px auto;
 }
@@ -642,7 +650,7 @@ div.tail-cont ul li {
     float: right;
     width: 42%;
     overflow: hidden;
-    height: 970px;
+    height: auto;
     position: relative;
     margin: 0px;
 }
@@ -651,7 +659,7 @@ div.tail-cont ul li {
     float: left;
     width: 57%;
     overflow: hidden;
-    height: 970px;
+    height: auto;
     position: relative;
     margin: 0px auto;
 }
@@ -855,7 +863,7 @@ td {
     height: 0%;
     font-family: roboto, sans serif;
     font-size: 13px;
-    overflow: hidden
+    overflow: hidden;
     /*float: left;*/
     color: #100000;
 }
@@ -865,13 +873,16 @@ td {
     overflow: hidden;
     position: relative;
     margin: 0px auto;
-    top: 100px;
+    height: auto;
 }
 
 .peopletitle {
+    position: relative;
     font-family: PT Serif, sans serif;
     font-weight: bold;
     font-size: 34px;
+    height: 48px;
+    margin-bottom: 30px;
 }
 
 .innerframe {
@@ -879,11 +890,11 @@ td {
     overflow: hidden;
     position: relative;
     margin: 0px auto;
-    top: 50px;
+    height: auto;
 }
 
 .peopleframe {
-    height: 280px;
+    height: 265px;
     width: 180px;
     position: relative;
     float: left;

@@ -56,13 +56,13 @@ def people():
 
 
     phdnumber = len(PhDs)
-    phdrows = list(range(phdnumber//5+1))
+    phdrows = list(range((phdnumber-1)//5+1))
     
     masternumber = len(masters)
-    masterrows = list(range(masternumber//5+1))
+    masterrows = list(range((masternumber-1)//5+1))
     
     undergraduatenumber = len(undergraduates)
-    undergraduaterows = list(range(undergraduatenumber//5+1))
+    undergraduaterows = list(range((undergraduatenumber-1)//5+1))
     
 
     cursor.close()
