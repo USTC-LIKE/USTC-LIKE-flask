@@ -113,7 +113,7 @@ p {
         margin: 0px auto;
         left: 0px;
         overflow: hidden;
-        width: 2000px;
+        width: 100%;
     }
 
     .head_index {
@@ -303,8 +303,8 @@ p {
 @media screen and (min-width: 1601px) {
  
     .headimg {
-        height: 350px;
-        width: 2000px;
+        height: 100%;
+        width: 100%;
     }
 
     .head_index {
@@ -387,8 +387,8 @@ p {
 @media screen and (max-width: 1600px) {
  
     .headimg {
-        height: 300px;
-        width: 1600px;
+        height: 100%;
+        width: 100%;
     }
 
     .head_index {
@@ -469,8 +469,8 @@ p {
 @media screen and (max-width: 1200px) {
  
     .headimg {
-        height: 250px;
-        width: 1200px;
+        height: 100%;
+        width: 100%;
     }
 
     .head_index {
