@@ -1,0 +1,51 @@
+{% extends "layout.html" %}
+{%block actpeo%} class="active" {% endblock%}
+{% block content %}
+<div class="people_frame">
+    <div class="peoplearea">
+    <h1>upload news</h1>
+    <form method="POST" enctype="multipart/form-data" id="myform">
+      <table>
+                <h1>Step1:Edit Title and Conent</h1>
+                <HR>
+                <h4>title:</h4><br>
+                {%if title%}
+                ><input type="text" name="title" value="{{title}}">
+                {%else%}
+                ><input type="text" name="title">
+                {%endif%}
+          <br>  
+                <HR>
+                <h4>insert picture:</h4><br>
+                <input type="file" name="file">
+                <input type="submit" value="insert_here"  name="submit">
+          <br>
+                <HR>
+                <h4>brief:</h4><br>
+                {% if brief %}
+                ><textarea type="text" color="#fff" name="brief" cols="58" rows="10" wrap="hard" placeholder="please input the content in english. Ignore it if you don't need it." >{{brief}}</textarea>
+                {%else%}
+                ><textarea type="text" color="#fff" name="brief" cols="58" rows="10" wrap="hard" placeholder="please input the content in english. Ignore it if you don't need it."></textarea>
+                {%endif%}
+          <br>
+                <HR>
+                <h4>content:</h4><br>
+                {%if content%}
+                ><textarea type="text" color="#fff" name="content" cols="58" rows="10" wrap="hard" placeholder="please input the content in english. Ignore it if you don't need it." >{{content}}</textarea>
+                {%else%}
+                ><textarea type="text" color="#fff" name="content" cols="58" rows="10" wrap="hard" placeholder="please input the content in english. Ignore it if you don't need it."></textarea>
+                {%endif%}
+          <br>          
+                <h1>Step2:Choose Title Picture</h1>
+                <HR>
+                <h4>title pciture:</h4><br>
+                <input type="file" name="title_pciture">
+          <br>
+                <h1>Step3:Submit</h1>
+                ><input type="submit" value="Upload" name="submit">
+          <br>
+      </table>
+    </form>
+</div>
+</div>
+{% endblock %}

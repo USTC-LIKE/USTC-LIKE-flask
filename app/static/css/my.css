@@ -113,7 +113,7 @@ p {
         margin: 0px auto;
         left: 0px;
         overflow: hidden;
-        width: 2000px;
+        width: 100px;
     }
 
     .head_index {
@@ -388,7 +388,7 @@ p {
  
     .headimg {
         height: 300px;
-        width: 1600px;
+        width: 100%;
     }
 
     .head_index {

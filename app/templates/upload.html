@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <title>upload</title>
+  </head>
+  <body>
+    <h1>upload you picture</h1>
+    <form method="POST" enctype="multipart/form-data" id="myform">
+      
+      
+        family name*:
+        <input type="text" name="family">
+        <br>
+    
+        given name*:
+        <input type="text" name="given">
+        <br>
+
+        category*:
+        <select name="category" form="myform">
+          <option value ="PhD">PhD student</option>
+          <option value ="graduate">graduate</option>
+          <option value="undergraduate">undergraduate</option>
+        </select>
+        <br>
+
+        picture:
+        <input type="file" name="file">
+        <br>
+
+        homepage:
+        <input type="url" name="homepage">
+        <br>
+
+        email:
+        <input type="email" name="email">
+        <br>
+
+        office-address:
+		<input type="text" name="office">
+        <br>
+        <hr>
+        <br>
+        Title1:
+        <input type="text" name="Title1" placeholder="please inpute the title in english,such as Research or Education background" value="Educational background" readonly="readonly">
+        <br>
+        Content1:<br>
+        <textarea type="text" color="#fff" name="Content1" cols="58" rows="10" wrap="hard" placeholder="please input the content in english. Ignore it if you don't need it."></textarea>
+        
+        <br>
+        <hr>
+        <br>
+        Title2:
+        <input type="text" name="Title2" placeholder="please inpute the title in english,such as Research or Education background" value="awards" readonly="readonly">
+        <br>
+        Content2:<br>
+        <textarea type="text" color="#fff" name="Content2" cols="58" rows="10" wrap="hard" placeholder="please input the content in english. Ignore it if you don't need it."></textarea>
+        
+        <br>
+        <hr>
+        <br>
+        Title3:
+        <input type="text" name="Title3" placeholder="please inpute the title in english,such as Research or Education background" value="publications" readonly="readonly">
+        <br>
+        Content3:<br>
+        <textarea type="text" color="#fff" name="Content3" cols="58" rows="10" wrap="hard" placeholder="please input the content in english. Ignore it if you don't need it."></textarea>
+        
+        <br>
+        <hr>
+        <br>
+        Title4:
+        <input type="text" name="Title4" placeholder="please inpute the title in english,such as Research or Education background">
+        <br>
+        Content4:<br>
+        <textarea type="text" color="#fff" name="Content4" cols="58" rows="10" wrap="hard" placeholder="please input the content in english. Ignore it if you don't need it."></textarea>
+        
+        <br>
+        <hr>
+        <br>
+        Title5:
+        <input type="text" name="Title5" placeholder="please inpute the title in english,such as Research or Education background">
+        <br>
+        Content5:<br>
+        <textarea type="text" color="#fff" name="Content5" cols="58" rows="10" wrap="hard" placeholder="please input the content in english. Ignore it if you don't need it."></textarea>
+        
+        <br>
+        <hr>
+        <br>
+
+
+        <input type="submit" value="Upload">
+    </form>
+    
+  </body>
+</html>
