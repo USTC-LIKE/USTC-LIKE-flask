@@ -1,0 +1,57 @@
+{% extends "layout_subpage.html" %}
+{%block actinf%} class="active" {% endblock%}
+
+   
+   {% block nav%}
+<!--
+                    <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><span class="glyphicon glyphicon-list">
+                            </span>招聘信息</a>
+                        </h4>
+                    </div>
+                    <div id="collapseOne" class="panel-collapse collapse in">
+                        <div class="panel-body">
+                            <table class="table">
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-pencil text-primary"></span><a href="/information/job1.html">工程师岗位</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-flash text-success"></span><a href="/information/job2.html">项目助理岗位</a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span class="glyphicon glyphicon-file text-info"></span><a href="/information/job3.html">博士后岗位</a>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+-->                  
+{%endblock%}
+{%block text%}
+                             
+
+
+
+    <img alt="head" width="860px" height="330px" src="../static/res/img/snow-hefei-spec.jpg"> <br> <br>
+
+<!--
+                                        <div class="introtxt">
+                                            <p>中国科学技术大学计算机科学技术学院下一代移动计算创新实验室招聘工程师</p>
+                                        </div> <br><br>
+-->                            
+{% autoescape false %}
+    <h3 class="job_title">{{news_title}}</h3> <br><br>
+
+    <div class="job_content">
+        {{news_content}}
+    </div> 
+{% endautoescape %}    
+{% endblock %}

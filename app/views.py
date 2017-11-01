@@ -86,7 +86,24 @@ def projects():
 @app.route("/news.html")
 @app.route("/news")
 def news():
-    return render_template("news.html")
+    conn=sqlite3.connect('news.db')
+    cur=conn.cursor()
+    cur.execute("select news_title,news_brief,news_TitlePic from news")
+    values=cur.fetchall()
+    print(values)
+#    print(values)
+    res=[[],[]]
+    style=0
+    choose=1
+    for each in values:
+        news_title=each[0]
+        news_brief=each[1]
+        news_TitlePic=each[2]
+        res[choose-1].append([news_title,news_brief,news_TitlePic,style+1])
+        style=(style+1)%3
+        choose=3-choose
+    
+    return render_template("news.html",res=res)
 
 @app.route("/publications.html")
 @app.route("/publications")
@@ -141,7 +158,6 @@ def single_people(name):
     cur=conn.cursor()
     cur.execute('select * from people where name=\''+name+'\'')
     values=cur.fetchall()[0]
-    print(values)
     category=values[1]
     homepage=values[2]
     email=values[3]
@@ -167,11 +183,9 @@ def single_people(name):
         title_content.append([title4,content4])
     if(content5!=None):
         title_content.append([title5,content5])
-    name1=name
-    print(type(name1))
+    name1=name    
     name2=name1.split('_',1)[0]+" "+name1.split('_',1)[1]
     name1.replace('_',' ')
-    print(name1)
 
     path="./app/static/save_file/"+name+".jpg"
     if os.path.isfile(path):
@@ -188,3 +202,220 @@ def single_people(name):
                             office=office,
                             title_content=title_content,
                             img=img)
+
+
+
+#!---------------------update-------------------------------------
+ALLOWED_EXTENSIONS = set(['png', 'jpg', 'jpeg', 'gif','PNG','JPG','JPEG','GIF'])
+app.config['UPLOAD_FOLDER'] = os.getcwd()+"/app/static/save_file"
+app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
+
+
+
+def save_db(name,category):
+    conn=sqlite3.connect('people.db')
+    cur=conn.cursor()
+    cur.execute('insert into people (name,category) values(\
+                            \''+name+'\',\''+
+                            category+'\')')
+    cur.close()
+    conn.commit()
+    conn.close()
+    return 1
+
+def allowed_file(filename):
+    return '.' in filename and \
+           filename.rsplit('.', 1)[1] in ALLOWED_EXTENSIONS
+
+@app.route('/upload',methods=['GET','POST'])
+def upload():
+    if request.method == 'POST':
+        conn=sqlite3.connect('people.db')
+        cur=conn.cursor()
+
+        file = request.files['file']       
+        family =request.form.get('family')#
+        given =request.form.get('given')#
+        category =request.form.get('category')#
+        homepage =str(request.form.get('homepage'))
+        email =str(request.form.get('email'))
+        office =str(request.form.get('office'))
+        Title1 =str(request.form.get('Title1'))
+        Title2 =str(request.form.get('Title2'))
+        Title3 =str(request.form.get('Title3'))
+        Title4 =str(request.form.get('Title4'))
+        Title5 =str(request.form.get('Title5'))
+        Content1 =str(request.form.get('Content1'))
+        Content2 =str(request.form.get('Content2'))
+        Content3 =str(request.form.get('Content3'))
+        Content4 =str(request.form.get('Content4'))
+        Content5 =str(request.form.get('Content5'))
+        name=family+"_"+given;
+        cur.execute('select * from people where name=\''+name+'\'')
+        values = cur.fetchall()
+
+     
+
+        if len(values)==0:
+            cur.execute('insert into people (name,category) values(\
+                            \''+name+'\',\''+
+                            category+'\')')
+
+        if len(homepage)!=0:
+            cur.execute('UPDATE people SET homepage = \''+homepage+'\' WHERE name=\''+name+'\'')
+
+        if len(email)!=0:
+            cur.execute('UPDATE people SET email = \''+email+'\' WHERE name=\''+name+'\'')
+
+        if len(office)!=0:
+            cur.execute('UPDATE people SET office = \''+office+'\' WHERE name=\''+name+'\'')
+
+        if len(Content1)!=0:
+            cur.execute('UPDATE people SET Content1 = \''+Content1+'\',Title1=\''+Title1+'\'\
+             WHERE name=\''+name+'\'')
+
+        if len(Content2)!=0:
+            cur.execute('UPDATE people SET Content2 = \''+Content2+'\',Title2=\''+Title2+'\'\
+             WHERE name=\''+name+'\'')
+
+        if len(Content3)!=0:
+            cur.execute('UPDATE people SET Content3 = \''+Content3+'\',Title3=\''+Title3+'\'\
+             WHERE name=\''+name+'\'')
+
+        if len(Content4)!=0:
+            cur.execute('UPDATE people SET Content4 = \''+Content4+'\',Title4=\''+Title4+'\'\
+             WHERE name=\''+name+'\'')
+
+        if len(Content5)!=0:
+            cur.execute('UPDATE people SET Content5 = \''+Content5+'\',Title5=\''+Title5+'\'\
+             WHERE name=\''+name+'\'')
+
+        if file and allowed_file(file.filename):
+            #filename = secure_filename(file.filename)
+            filename = file.filename
+            #save_db(family+"_"+given,category)
+            file.save(os.path.join(app.config['UPLOAD_FOLDER'], family+"_"+given+"."+filename.rsplit('.', 1)[1]))
+        
+        cur.close()
+        conn.commit()
+        conn.close()
+
+        return family+"_"+given+","+category+"\nThanks!"
+        
+
+    return render_template("upload.html")
+
+#!--------------------------------------upload news---------------------------------------------------
+upload_img_path = os.getcwd()+"\\app\\static\\news_img"
+
+
+
+def SaveNews(news_title,news_content,news_brief,news_TitlePic):
+    conn=sqlite3.connect('news.db')
+    cur=conn.cursor()
+    cur.execute("select * from news")
+    vals=cur.fetchall()
+    num=len(vals)
+    cur.execute("insert into news (news_id,news_title,news_content,news_brief,news_TitlePic) values('%s','%s','%s','%s','%s')"
+                %(str(num+1),news_title,news_content,news_brief,news_TitlePic) )
+    cur.close()
+    conn.commit()
+    conn.close()
+    return 1
+
+
+
+def SaveInsertPic(file):
+    conn=sqlite3.connect('news.db')
+    cur=conn.cursor()
+    cur.execute("select * from pic")
+    vals=cur.fetchall()
+    num=len(vals)
+    filename=file.filename
+    print(filename)
+    name=str(num+1)+"."+filename.rsplit('.', 1)[1]
+    #save_db(family+"_"+given,category)
+    
+    file.save(os.path.join(upload_img_path, name))
+    cur.execute("insert into pic (name) values('%s')"%name)
+    cur.close()
+    conn.commit()
+    conn.close()
+    return '\n<!--Do not delete this!!!-->\n</div>\n<img style="max-height: 330px;max-width: 860px;" src="../static/news_img/%s"/>\n<div class="job_content">\n<!--Do not delete this!!!-->'%(name)
+    #return '\n<!--Do not delete this!!!-->\n<img alt="head" width="860px" height="330px src="../static/news_img/%s"/>\n<!--Do not delete this!!!-->\n'%(name)
+
+def SaveTitlePic(file):
+    conn=sqlite3.connect('news.db')
+    cur=conn.cursor()
+    cur.execute("select * from pic")
+    vals=cur.fetchall()
+    num=len(vals)
+    filename=file.filename
+    name=str(num+1)+"."+filename.rsplit('.', 1)[1]
+    #save_db(family+"_"+given,category)
+    file.save(os.path.join(upload_img_path, name))
+    cur.execute("insert into pic (name) values('%s')"%name)
+    cur.close()
+    conn.commit()
+    conn.close()
+    return (name)
+
+@app.route('/upload_news',methods=['GET','POST'])
+def upload_news():
+    if request.method == 'POST':
+        print(111)
+        print("It is: "+request.form.get('submit'))
+        #print(request.form['submit'])
+        conn=sqlite3.connect('news.db')
+        cur=conn.cursor()
+        if(request.form.get('submit')=='Upload'):
+            print('Upload')
+            title=request.form.get('title')
+            brief=request.form.get('brief')
+            content=request.form.get('content')
+            file = request.files['title_pciture']
+            if file and allowed_file(file.filename):
+                TitlePic=SaveTitlePic(file)
+            else:
+                return "ERROR: file is not allowed"
+
+            SaveNews(news_title=title,news_content=content
+                    ,news_brief=brief,news_TitlePic=TitlePic)
+            return "Uplaoded!"
+
+
+        elif(request.form.get('submit')=='insert_here'):
+            print('insert_here')
+            title=request.form.get('title')
+            brief=request.form.get('brief')
+            content=request.form.get('content')
+            print(title)
+            print(brief)
+            print(content)
+            file = request.files['file']
+            cmd=""
+            if file and allowed_file(file.filename):
+                cmd=SaveInsertPic(file)
+            NewContent=content+cmd
+            return render_template("upload_news.html",title=title,brief=brief,content=NewContent)
+
+
+    return render_template("upload_news.html")
+
+#!-------------------------------------show news---------------------------------------------------------
+@app.route("/news.html/<news_id>")
+@app.route("/news/<news_id>")
+def show_news(news_id):
+    conn=sqlite3.connect('news.db')
+    cur=conn.cursor()
+    cur.execute("select news_title,news_content from news where news_id=%s"%(news_id))
+    values=cur.fetchall()
+#    print(values)
+    news_title=values[0][0]
+    news_content=values[0][1]
+    return render_template("single_news.html",
+                        news_title=news_title,
+                        news_content=news_content)
+
+
+

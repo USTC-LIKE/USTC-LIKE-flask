@@ -38,228 +38,35 @@
        <!-- <div class="col-sm-9" id="projects_scrollbody">-->
            <div class="project-main">
                 <div class="project-content-left">
-                    <div id="proj_mmwave" class="card-style1">
+                    {%for each in res[0]%}
+                    <div id="proj_mmwave" class="card-style{{each[3]}}">
                         <div class="card-general">
-                            <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="mmWave Networks">
+                            <img class="project-card-img" src="../static/news_img/{{each[2]}}">
                             <div class="card-block">                
-                                <h5>News Title</h5>                
+                                <h5>{{each[0]}}</h5>                
                                 <p class="project-card-content">
-                                    News content.
+                                    {{each[1]}}
                                 </p>                
-                                
                             </div>            
                         </div> 
                     </div> <!-- mmWave card -->
-                    
-                    <div id="proj_vibrations" class="card-style2">
-                        <div class="card-general">                       
-                            <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="Physical Vibration">
-                            <div class="card-block">
-                                <h5>Physical Vibration</h5>
-                                <p class="project-card-content">
-                                    We envision physical vibration as a new modality of data communication.
-                                    As an example, we have enabled touch-based <a href="http://synrg.csl.illinois.edu/ripple/">vibratory communication</a> between vibration motors and microphones/accelerometers in today's smartphones. We design vibratory radio at the PHY and MAC layers, and explore a few possible applications in authentication, device to device streaming, and tabletop communication.
-                                </p>     
-                                <p class="card-reference">
-                                    Papers:
-                                    <a href="http://synrg.csl.illinois.edu/papers/ripple2_nsdi16_nirupam.pdf"><span class="project-pub">[NSDI'16]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/ripple_nsdi15_nirupam.pdf"><span class="project-pub">[NSDI'15]</span></a>
-
-                                </p>        
-                            </div>            
-                        </div> 
-                    </div>    <!-- Vibration Card -->
-                    
-                    <div id="proj_robotics" class="card-style3">
-                        <div class="card-general">                                    
-                            <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="Drones and Robots">
-                            <div class="card-block">
-                                <h5>Drones and Robots</h5>
-                                <p class="project-card-content">
-                                    <!--
-                                    We explore <a href="http://croy.web.engr.illinois.edu/im_project/im_home.html">injecting mobility into wireless network infrastructure</a>. For example, we have utilized drones to extend cell tower coverage, and have placed WiFi access points on moving robots to optimize user performance. To improve reliability, we have used multiple GPS receivers on the drone as a failsafe mechanism for IMU failures.
-                                    -->
-                                    There is growing agreement that wireless capacity (at the PHY and MAC layers) is reaching saturation. Many believe that the next “jump” in network capacity will emerge from new ways of organizing networks. <a href="http://synrg.csl.illinois.edu/im_project/">This project</a> considers the possibility of physically moving wireless network infrastructure to improve/optimize desired performance metrics. For example, we envision WiFi access points on wheels that move within a small region to exploit the multipath nature of wireless signals; we also envision drones flying into high demand areas, hovering at strategic locations, and serving as cellular proxies to ground clients. This project is a foray into the landscape of such "robotic wireless networks".
-                                </p>     
-                                <p class="card-reference">
-                                    Papers:
-                                    <a href="http://synrg.csl.illinois.edu/papers/dronenet_hotmobile2017.pdf"><span class="project-pub">[HotMobile'17]</span></a>
-<a href="http://synrg.csl.illinois.edu/papers/robotic_wireless.pdf"><span class="project-pub">[WWW'16]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/drone-attitude-camera.pdf"><span class="project-pub">[MobiCom'16]</span></a>
-
-                                </p>        
-                            </div>            
-                        </div> 
-                    </div>    <!-- Robotics Card -->
-                    
-                    <div id="proj_sfftheory" class="card-style3">
-                        <div class="card-general">                   
-                            <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="The Sparse Fourier Transform: Theory">
-                            <div class="card-block">
-                                <h5>The Sparse Fourier Transform: Theory</h5>
-                                <p class="project-card-content">
-                                    For signals of length n that are (approximately) k-sparse in the frequency domain, i.e., can be approximated by k non-zero frequency coefficients, the sparse Fourier transform computes the Fourier transform in sublinear time, <a href="http://groups.csail.mit.edu/netmit/sFFT/">faster than FFT</a> and using less input samples.
-                                </p>     
-                                <p class="card-reference">
-                                    Papers:
-                                    <a href="http://synrg.csl.illinois.edu/papers/2dsfftsub.pdf"><span class="project-pub">[Allerton'13]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/sFFT.pdf"><span class="project-pub">[SODA'12]</span> </a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/hikp12.pdf"><span class="project-pub">[STOC'12]</span> </a>
-
-                                </p>        
-                            </div>            
-                        </div> 
-                    </div>    <!-- SFFT theory card -->
-                    
-                    <div id="proj_sfftapps" class="card-style3">
-                        <div class="card-general">         
-                            <img class="project-card-img" src="../static/res/img/bg.jpg"  alt="The Sparse Fourier Transform: Theory">
-                            <div class="card-block">
-                                <h5>The Sparse Fourier Transform: Applications</h5>
-                                <p class="project-card-content">
-                                    We have demonstrated the impact of SFFT on several practical applications, including GHz-wide spectrum acquisition, GPS, <a href="http://groups.csail.mit.edu/netmit/LFSparseRecon/">light-field photography</a>, magnetic resonance imaging (MRI), biomolecular nuclear magnetic Resonance (NMR), and radio astronomy. We have also built a chip that delivers the largest Fourier Transform to date for sparse data.
-                                </p>     
-                                <p class="card-reference">
-                                    Papers:
-                                    <a href="http://www.ncbi.nlm.nih.gov/pubmed/26123316"><span class="project-pub">[J. Biomol. NMR'15]</span></a>                                    
-                                    <a href="http://synrg.csl.illinois.edu/papers/a12-shi.pdf"><span class="project-pub">[SIGGRAPH'14]</span></a>                                    
-                                    <a href="http://synrg.csl.illinois.edu/papers/bigband_infocom.pdf"><span class="project-pub">[Infocom'14]</span></a>
-                                    <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=6757512"><span class="project-pub">[ISSCC'14]</span> </a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/sfft_fpl.pdf"><span class="project-pub">[FPL'14]</span> </a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/CCSI_sFFT_MoCo_ENC2014.pdf"><span class="project-pub">[ENC'14]</span></a>
-                                    <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?tp=&amp;arnumber=6757512"><span class="project-pub">[ISSCC'14]</span> </a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/sfft_fpl.pdf"><span class="project-pub">[FPL'14]</span> </a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/mrs_sfft.pdf"><span class="project-pub">[ISMRM'13]</span></a>                                    
-                                    <a href="http://synrg.csl.illinois.edu/papers/QuickSync-mobicom.pdf"><span class="project-pub">[MobiCom'12]</span></a>                                    
-                                </p>        
-                            </div>            
-                        </div> 
-                    </div>      <!-- SFFT applicaiton card -->
-                    
-                    
-                    <div id="proj_ar" class="card-style3">
-                        <div class="card-general">                 
-                            <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="Augmented Reality">
-                            <div class="card-block">
-                                <h5>Augmented Reality</h5>
-                                <p class="project-card-content">
-                                    <!--
-                                    We have designed <a href="https://www.youtube.com/watch?v=vQwUWZ-7Qd0">selective cloud-offloaded computer vision</a> under the constraints of today's smartphones to improve mobile agumented reality experience.
-                                    -->
-                                    The idea of augmented reality - the ability to look at a physical object through a camera and view annotations about the object - is certainly not new. Yet, this apparently feasible vision has not yet materialized into a precise, fast, and comprehensively usable system. We aim to build a ready-to-use mobile AR system, and we adopt a top-down approach cutting across smartphone sensing, computer vision, cloud offloading, and linear optimization. For instance, we have designed <a href="https://www.youtube.com/watch?v=vQwUWZ-7Qd0">selective cloud-offloaded computer vision</a> under the constraints of today's smartphones to improve mobile agumented reality experience.
-                                </p>     
-                                <p class="card-reference">
-                                    Papers:
-                                    <a href="http://synrg.csl.illinois.edu/papers/VisualPrint-Camera.pdf"><span class="project-pub">[CoNEXT'16]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/overlay.pdf"><span class="project-pub">[MobiSys'15]</span></a>
-
-                                </p>        
-                            </div>            
-                        </div> 
-                    </div>    <!-- AR card -->
-                                                                                                               
+                    {%endfor%}
                 </div>
                 <div class="project-content" >
-                    <div id="proj_sports" class="card-style3">
+                    {%for each in res[1]%}
+                    <div id="proj_sports" class="card-style{{each[4]}}">
                         <div class="card-general">                 
-                            <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="Motion Tracking in Sports">
+                            <img class="project-card-img" src="../static/news_img/{{each[3]}}">
                             <div class="card-block">
-                                <h5>News Title</h5>
+                                <h5>{{each[0]}}</h5>
                                 <p class="project-card-content">
-                                    blablabla
+                                    {{each[1]}}
                                 </p>  
-                                    
                             </div>            
                         </div> 
                     </div>
-
-                    <div id="proj_gesture" class="card-style3">
-                        <div class="card-general">                       
-                            <!-- <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="Gesture Recognition"> -->
-                            <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="Gesture Recognition">
-                            <div class="card-block">
-                                <h5>Gesture Recognition</h5>
-                                <p class="project-card-content">
-                                    We have been pushing the frontier of activity and gesture recognition.
-                                    For instance, we have been tracking <a href="http://synrg.csl.illinois.edu/posture/">arm</a> and <a href="https://www.youtube.com/watch?v=scZEHExzems">finger</a> movements through smartwatch sensors, with applications to sports coaching, healthcare, and natural user interfaces (3D mouse).
-                                    The core problems are at the boundaries of embedded system, statistical inference, and signal processing.
-                                    Our results thus far are promising (see <a href="http://synrg.csl.illinois.edu/posture/">ArmTrak video</a>), but we still have many exciting problems to solve.
-                                </p>  
-                                <p class="card-reference">
-                                    Papers:
-                                    <a href="http://synrg.csl.illinois.edu/papers/ArmTrak_Mobisys.pdf"><span class="project-pub">[MobiSys'16]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/mole.pdf"><span class="project-pub">[MobiCom'15]</span></a>
-
-                                    <a href="http://synrg.csl.illinois.edu/papers/mobi198-agrawal.pdf"><span class="project-pub">[MobiSys'11]</span></a>                                    
-                                </p>        
-                            </div>            
-                        </div> 
-                    </div>     
-                    
-                    <div id="proj_localization" class="card-style3">
-                        <div class="card-general">                        
-                            <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="Localization">
-                            <div class="card-block">
-                                <h5>Localization</h5>
-                                <p class="project-card-content">
-                                    We aim to develop different technologies to bring indoor localization into reality. These technologies are built upon motion signal processing, sensor fusion, human motion analysis and wireless sensing. For instance, we have proposed an <a href="https://www.youtube.com/watch?v=a35rCtUDg10">unsupervised indoor localization</a> scheme that bypasses the need for war-driving. We have also designed various techniques to improve localization accuracy, including reliable <a href="http://synrg.csl.illinois.edu/projects/localization/walkcompass/">walking direction detection</a> with smartphones, more precise localization using PHY layer information or user spinning, and Wi-Fi labeling with picture matching. We also applied localization to object positioning.
-                                </p>  
-                                <p class="card-reference">
-                                    Papers:
-                                    <a href="http://synrg.csl.illinois.edu/papers/AutoLabel_UbiComp16.pdf"><span class="project-pub">[UbiComp'16]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/walkcompass.pdf"><span class="project-pub">[MobiSys'14]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/iSee_final.pdf"><span class="project-pub">[UbiComp'13]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/unloc-final.pdf"><span class="project-pub">[MobiSys'12 A]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/ops-final.pdf"><span class="project-pub">[MobiSys'12 B]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/pinloc-final.pdf"><span class="project-pub">[MobiSys'12 C]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/spinloc_hotmobile12.pdf"><span class="project-pub">[HotMobile'12]</span></a>
-
-                                </p>        
-                            </div>            
-                        </div> 
-                    </div> 
-                    
-                    <div id="proj_rfid" class="card-style3">
-                        <div class="card-general">                         
-                            <img class="project-card-img" src="../static/res/img/bg4.jpg"  alt="RFID Communication">
-                            <div class="card-block">
-                                <h5>RFID Networks </h5>
-                                <p class="project-card-content">
-                                    We have been developing solutions to make RFID networks more secure and reliable. For instance, we propose to prevent eavesdropping on RFID data by randomizing the signal and the wireless channel. We also design systems that use an external wearable device equipped with a full-duplex radio to secure transmissions to and from the <a href="http://groups.csail.mit.edu/netmit/IMDShield/">medical implant</a>. We improve reliability  and efficiency of low power backscatter networks by modeling uplink transmissions as if performed by a single virtual sender and treating collisions as a sparse rateless code across the nodes.
-                                </p>  
-                                <p class="card-reference">
-                                    Papers:
-                                    <a href="http://synrg.csl.illinois.edu/papers/nsdi15-paper-hassanieh.pdf"><span class="project-pub">[NSDI'15]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/sigcomm12-backscatter.pdf"><span class="project-pub">[SIGCOMM'12]</span></a> 
-                                    <a href="http://synrg.csl.illinois.edu/papers/secureimd-sigcomm2011.pdf"><span class="project-pub">[SIGCOMM'11]</span></a>
-
-                                </p>        
-                            </div>            
-                        </div> 
-                    </div>  
-                    
-                    <div id="proj_sidechannel" class="card-style3">
-                        <div class="card-general">                 
-                            <img class="project-card-img" src="../static/res/img/bg3.jpg"  alt="Side Channel Attacks">
-                            <div class="card-block">
-                                <h5>Side Channel Attacks</h5>
-                                <p class="project-card-content">
-                                    We reveal various kinds of side channel attacks on today's mobile and wearable devices. For example, we demonstrate that sensor data from smart watches can leak information about <a href="https://www.youtube.com/watch?v=scZEHExzems">what the user is typing</a> on a regular (laptop or desktop) keyboard. We find the <a href="http://synrg.csl.illinois.edu/vibraphone/">vibration motor in mobile devices</a> can eavesdrop. We reveal that each smartphone accelerometer responds differently to the same motion stimulus and can serve as a fingerprint of smartphones. We also show that the location of screen taps on modern smartphones and tablets can be identified from accelerometer and gyroscope readings.
-                                </p>  
-                                <p class="card-reference">
-                                    Papers:
-                                    <a href="http://synrg.csl.illinois.edu/papers/VibraPhone_mobisys16.pdf"><span class="project-pub">[MobiSys'16]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/mole.pdf"><span class="project-pub">[MobiCom'15]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/AccelPrint_NDSS14.pdf"><span class="project-pub">[NDSS'14]</span></a>
-                                    <a href="http://synrg.csl.illinois.edu/papers/tapprints-final.pdf"><span class="project-pub">[MobiSys'12]</span></a>
-
-                                </p>        
-                            </div>            
-                        </div> 
-                    </div>                                        
-                    
-                    
-                                                   
+                    {%endfor%}
+                             
                 </div> <!-- End second column -->
             </div><!-- End cards row -->
        <!-- </div>-->
